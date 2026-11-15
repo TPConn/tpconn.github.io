@@ -1,367 +1,930 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index, follow" />
-  <title>Privacy Policy — The Participant Connection (com.theparticipantconnection.app)</title>
-  <meta name="description" content="Official Privacy Policy for The Participant Connection Android application (com.theparticipantconnection.app)." />
-  <link rel="icon" type="image/png" href="./logo-160.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official Privacy Policy and Terms of Use for The Participant Connection (TPC) mobile application (Android, iPhone, and iPad — v1.2.40 / Build 133)." />
+  <title>Privacy Policy &amp; Terms of Use — The Participant Connection (TPC)</title>
   <style>
     :root {
       --navy: #0B2A5B;
-      --navy-dark: #061A3A;
-      --blue: #0369A1;
-      --sky: #6FB3E8;
+      --navy-dark: #071D40;
+      --blue: #0284C7;
+      --blue-dark: #0369A1;
+      --emerald: #059669;
+      --emerald-bg: #ECFDF5;
+      --emerald-border: #A7F3D0;
+      --amber-text: #92400E;
+      --amber-bg: #FFFBEB;
+      --amber-border: #FDE68A;
+      --sky-bg: #F0F9FF;
+      --sky-border: #BAE6FD;
       --bg: #F8FAFC;
-      --card: #FFFFFF;
-      --text: #1E293B;
+      --surface: #FFFFFF;
+      --text: #0F172A;
       --muted: #475569;
       --border: #E2E8F0;
+      --shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      --radius: 14px;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
+      padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.65;
       font-size: 16px;
+      overflow-x: hidden;
     }
-    header.hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 65%, #134484 100%);
+
+    a {
+      color: var(--blue-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-word;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--navy);
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      background: #F1F5F9;
+      color: #0F172A;
+      padding: 0.14em 0.42em;
+      border-radius: 5px;
+      border: 1px solid #E2E8F0;
+      word-break: break-word;
+    }
+
+    /* Header */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #114388 100%);
       color: #FFFFFF;
-      border-bottom: 4px solid var(--sky);
-      padding: 36px 20px;
+      padding: 28px 16px 26px;
+      border-bottom: 4px solid var(--emerald);
     }
+
     .hero-inner {
-      max-width: 880px;
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
       flex-wrap: wrap;
     }
+
     .hero-logo {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
       background: #FFFFFF;
-      padding: 3px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      padding: 4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       flex-shrink: 0;
+      object-fit: contain;
     }
-    .hero-title {
-      margin: 0 0 4px 0;
-      font-size: 1.85rem;
-      font-weight: 800;
-      letter-spacing: -0.3px;
+
+    .hero-copy {
+      flex: 1 1 260px;
+      min-width: 0;
     }
-    .hero-motto {
-      margin: 0 0 8px 0;
-      color: #BAE6FD;
-      font-size: 0.92rem;
+
+    .hero-kicker {
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 1.8px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: #A7F3D0;
+      margin: 0 0 4px;
     }
-    .hero-meta {
+
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.45rem, 3.2vw, 2rem);
+      line-height: 1.2;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .hero-subtitle {
       margin: 0;
-      font-size: 0.9rem;
       color: #E2E8F0;
+      font-size: 0.96rem;
     }
-    .hero-meta a {
-      color: #BAE6FD;
-      text-decoration: underline;
+
+    .meta-strip {
+      max-width: 960px;
+      margin: 16px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    main {
-      max-width: 880px;
-      margin: 28px auto 56px auto;
-      padding: 0 20px;
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
     }
-    .policy-card {
-      background: var(--card);
+
+    /* Sticky Quick Nav */
+    .quick-nav-wrap {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+
+    .quick-nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .quick-nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: var(--navy);
+      background: #F1F5F9;
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px 36px;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
     }
-    .meta-grid {
+
+    .quick-nav a:hover,
+    .quick-nav a:focus-visible {
+      background: #E0F2FE;
+      border-color: var(--blue);
+      color: var(--navy-dark);
+    }
+
+    .quick-nav a.terms-pill {
+      background: #ECFEFF;
+      border-color: #A5F3FC;
+      color: #155E75;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 960px;
+      margin: 22px auto 44px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      scroll-margin-top: 78px;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.18rem, 2.5vw, 1.42rem);
+      color: var(--navy);
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .card h3 {
+      margin: 18px 0 8px;
+      font-size: 1.04rem;
+      color: #1E293B;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+    }
+
+    .card p:last-child,
+    .card ul:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin: 8px 0 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .summary-tile {
       background: #F8FAFC;
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 18px;
-      margin-bottom: 22px;
-      font-size: 0.95rem;
-    }
-    .summary-box {
-      background: #F0F9FF;
-      border: 1px solid #BAE6FD;
       border-left: 4px solid var(--blue);
       border-radius: 10px;
-      padding: 16px 20px;
-      margin: 20px 0 28px 0;
+      padding: 13px 14px;
     }
-    .summary-box h2 {
-      margin-top: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-      font-size: 1.12rem;
+
+    .summary-tile.green {
+      border-left-color: var(--emerald);
+      background: #F4FBF8;
     }
-    .summary-box strong { color: var(--navy); }
-    h2 {
+
+    .summary-tile.navy {
+      border-left-color: var(--navy);
+    }
+
+    .summary-tile strong {
+      display: block;
       color: var(--navy);
-      font-size: 1.28rem;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
     }
-    p, li { color: var(--text); }
-    ul, ol { padding-left: 22px; }
-    li { margin-bottom: 8px; }
-    code {
-      background: #F1F5F9;
-      color: #0F172A;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.9em;
+
+    .summary-tile span {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--muted);
     }
+
+    .callout {
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 0.94rem;
+      border: 1px solid transparent;
+    }
+
+    .callout > strong:first-child {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .callout.green {
+      background: var(--emerald-bg);
+      border-color: var(--emerald-border);
+      color: #065F46;
+    }
+
+    .callout.sky {
+      background: var(--sky-bg);
+      border-color: var(--sky-border);
+      color: #0C4A6E;
+    }
+
+    .callout.amber {
+      background: var(--amber-bg);
+      border-color: var(--amber-border);
+      color: var(--amber-text);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 999px;
+      vertical-align: middle;
+    }
+
+    .badge-operational {
+      background: #DCFCE7;
+      color: #166534;
+      border: 1px solid #86EFAC;
+    }
+
+    .badge-coming-soon {
+      background: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FCD34D;
+    }
+
+    /* Responsive Table */
     .table-wrap {
+      width: 100%;
       overflow-x: auto;
-      margin: 16px 0;
+      -webkit-overflow-scrolling: touch;
+      margin: 12px 0 4px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.95rem;
+      min-width: 620px;
+      font-size: 0.91rem;
+      background: #FFFFFF;
     }
-    th, td {
-      border: 1px solid var(--border);
-      padding: 11px 14px;
+
+    th,
+    td {
       text-align: left;
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--border);
       vertical-align: top;
     }
+
     th {
       background: #F1F5F9;
       color: var(--navy);
       font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
-    a { color: var(--blue); }
-    address.contact-box {
-      font-style: normal;
-      background: #F8FAFC;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 20px;
-      line-height: 1.75;
+
+    tr:last-child td {
+      border-bottom: none;
     }
+
+    .lang-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 10px 0 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .lang-list li {
+      margin: 0;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1E293B;
+    }
+
+    .card.terms-card {
+      border: 2px solid #BAE6FD;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    }
+
     footer {
-      max-width: 880px;
-      margin: 0 auto 40px auto;
-      padding: 0 20px;
+      max-width: 960px;
+      margin: 0 auto 36px;
+      padding: 16px;
       text-align: center;
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
+
     @media (max-width: 640px) {
-      .policy-card { padding: 22px 18px; }
-      .hero-title { font-size: 1.45rem; }
+      .hero {
+        padding: 22px 14px 20px;
+      }
+
+      .hero-logo {
+        width: 56px;
+        height: 56px;
+      }
+
+      .card {
+        padding: 18px 16px;
+        border-radius: 12px;
+      }
+
+      body {
+        font-size: 15.5px;
+      }
+
+      .table-wrap {
+        overflow-x: visible;
+        border: none;
+        border-radius: 0;
+      }
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody tr {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        background: #F8FAFC;
+      }
+
+      tbody tr:last-child {
+        margin-bottom: 0;
+      }
+
+      tbody td {
+        border-bottom: 1px solid #E2E8F0;
+        padding: 8px 2px;
+      }
+
+      tbody td:last-child {
+        border-bottom: none;
+        padding-bottom: 2px;
+      }
+
+      tbody td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--navy);
+        margin-bottom: 3px;
+      }
     }
+
     @media print {
-      header.hero { background: #FFFFFF; color: #000000; border-bottom: 2px solid #000000; }
-      .hero-motto, .hero-meta, .hero-meta a { color: #333333; }
-      .policy-card { border: none; box-shadow: none; padding: 0; }
+      .quick-nav-wrap {
+        display: none;
+      }
+
+      .hero {
+        background: #0B2A5B !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .table-wrap {
+        overflow: visible;
+      }
+
+      table {
+        min-width: 0;
+      }
     }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <img class="hero-logo" src="./logo-160.png" alt="The Participant Connection Logo" />
-      <div>
-        <h1 class="hero-title">Privacy Policy — The Participant Connection</h1>
-        <p class="hero-motto">Inform &bull; Support &bull; Empower</p>
-        <p class="hero-meta">
-          Android Application (<code>com.theparticipantconnection.app</code>) &bull;
-          Effective Date: November 5, 2026 &bull;
-          Last Updated: November 5, 2026
-        </p>
+      <img src="./logo-160.png" alt="The Participant Connection logo" class="hero-logo" width="68" height="68" />
+      <div class="hero-copy">
+        <p class="hero-kicker">Inform &bull; Support &bull; Empower</p>
+        <h1>The Participant Connection — Privacy Policy &amp; Terms of Use</h1>
+        <p class="hero-subtitle">Independent, local-first companion application for clinical research participants on Android, iPhone, and iPad.</p>
       </div>
+    </div>
+    <div class="meta-strip" aria-label="Document metadata">
+      <span class="meta-pill">Effective &amp; Last Updated: November 15, 2026</span>
+      <span class="meta-pill">Verified App Release: v1.2.40 (Build 133)</span>
+      <span class="meta-pill">Platforms: Android &amp; iOS / iPadOS</span>
+      <span class="meta-pill">Package / Bundle ID: com.theparticipantconnection.app</span>
+      <span class="meta-pill">Apple App ID: 6831811813</span>
     </div>
   </header>
 
+  <nav class="quick-nav-wrap" aria-label="Section navigation">
+    <div class="quick-nav">
+      <a href="#overview">Overview</a>
+      <a href="#local-data">On-Device Data</a>
+      <a href="#encrypted-backups">Encrypted Backups &amp; Exports</a>
+      <a href="#cloud-backup">Opt-In Cloud Backup</a>
+      <a href="#online-features">Online Services &amp; Third Parties</a>
+      <a href="#permissions">Permissions &amp; Biometrics</a>
+      <a href="#subscriptions">Subscriptions</a>
+      <a href="#study-opps">TPC Study Opps (Coming Soon)</a>
+      <a href="#retention">Retention &amp; Deletion</a>
+      <a href="#terms" class="terms-pill">Terms of Use</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <main>
-    <article class="policy-card">
-      <div class="meta-grid">
-        <strong>Application Name:</strong> The Participant Connection<br />
-        <strong>Android Package Identifier:</strong> <code>com.theparticipantconnection.app</code><br />
-        <strong>Developer:</strong> The Participant Connection<br />
-        <strong>Privacy Contact Email:</strong> <a href="mailto:theparticipantconnection@gmail.com">theparticipantconnection@gmail.com</a><br />
-        <strong>Effective Date:</strong> November 5, 2026 &bull; <strong>Last Updated:</strong> November 5, 2026
-      </div>
-
-      <section class="summary-box" aria-labelledby="summary-heading">
-        <h2 id="summary-heading">At-a-Glance Privacy Summary</h2>
-        <ul>
-          <li><strong>No Accounts &amp; No Developer Servers:</strong> You do not need to create an account, register an email address, or sign in to use the App, and we operate no backend servers or cloud databases that receive, store, or view your clinical study records, appointments, checklists, health logs, or Informed Consent Form (ICF) photographs.</li>
-          <li><strong>Local On-Device Storage:</strong> All participant records and photographed consent pages remain stored locally inside the App's private Android storage on your device (with automatic Android cloud backup disabled).</li>
-          <li><strong>No Advertising or Data Brokers:</strong> The App contains no third-party advertising SDKs, behavioral ad trackers, or data-monetization scripts. We never sell or rent participant data.</li>
-          <li><strong>On-Device OCR &amp; Translation (Google ML Kit):</strong> Document scanning and translation run locally on your device; Google's ML Kit SDK connects to Google only to download offline language/OCR models and transmit standard SDK operational diagnostics (never your photos or consent text).</li>
-        </ul>
-      </section>
-
+    <section id="overview" class="card">
       <h2>1. Overview &amp; Scope</h2>
       <p>
-        <strong>The Participant Connection</strong> ("TPC," "the App," "we," "us," or "our") is an independent educational and personal organization mobile application created to help clinical research participants stay informed, organized, and prepared throughout their research experience (<em>Inform &bull; Support &bull; Empower</em>).
+        This Privacy Policy explains how <strong>The Participant Connection</strong> (&ldquo;<strong>TPC</strong>,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;the App&rdquo;)
+        handles information when you use <strong>The Participant Connection</strong> mobile application on <strong>Android</strong> or
+        <strong>iOS / iPadOS</strong> (Apple App Store &amp; TestFlight / Google Play).
       </p>
       <p>
-        This Privacy Policy applies to The Participant Connection Android application distributed under package identifier <code>com.theparticipantconnection.app</code>. It explains what information you may store locally inside the App, how Android device permissions are used, what limited technical diagnostics are processed by bundled platform libraries (specifically Google ML Kit), how user-initiated backups and external links work, and how you control or delete your information at any time.
+        The permanent public URL for this policy is
+        <a href="https://tpconn.github.io/">https://tpconn.github.io/</a> (with Subscription &amp; Usage Terms at
+        <a href="https://tpconn.github.io/#terms">https://tpconn.github.io/#terms</a>). This document applies to
+        <strong>version 1.2.40 (Build 133)</strong> and has been audited directly against our Android and iOS/iPadOS application source code.
       </p>
 
-      <h2>2. Independent Educational Tool &amp; Non-Affiliation Notice</h2>
-      <p>
-        The Participant Connection is an independent participant-support application. It is <strong>not</strong> affiliated with, sponsored by, or operated on behalf of any pharmaceutical sponsor, Contract Research Organization (CRO), Clinical Research Unit (CRU), hospital, Institutional Review Board (IRB) / Independent Ethics Committee (IEC), or government agency. The App does not conduct clinical trials, recruit or enroll human subjects into research protocols, transmit electronic patient-reported outcomes (ePRO) to researchers, or provide medical advice, diagnosis, or treatment.
-      </p>
+      <div class="callout sky">
+        <strong>Language Availability</strong>
+        This hosted Privacy Policy &amp; Terms page is published in English. Inside the App, core onboarding disclosures,
+        privacy notices, subscription disclosures, backup explanations, and user interface controls are localized across
+        <strong>12 languages</strong>:
+      </div>
 
-      <h2>3. Information Stored Locally on Your Device</h2>
+      <ul class="lang-list" aria-label="12 supported app languages">
+        <li>English (<code>en</code>)</li>
+        <li>Spanish / Español (<code>es</code>)</li>
+        <li>German / Deutsch (<code>de</code>)</li>
+        <li>Simplified Chinese / 简体中文 (<code>zh</code> / <code>zh-Hans</code>)</li>
+        <li>Japanese / 日本語 (<code>ja</code>)</li>
+        <li>French / Français (<code>fr</code>)</li>
+        <li>Vietnamese / Tiếng Việt (<code>vi</code>)</li>
+        <li>Filipino / Tagalog (<code>fil</code> / <code>tl</code>)</li>
+        <li>Korean / 한국어 (<code>ko</code>)</li>
+        <li>Arabic / العربية (<code>ar</code>, RTL)</li>
+        <li>Thai / ไทย (<code>th</code>)</li>
+        <li>Portuguese (Brazil) / Português (Brasil) (<code>pt-BR</code> / <code>pt</code>)</li>
+      </ul>
+
+      <div class="summary-grid">
+        <div class="summary-tile green">
+          <strong>No Developer Servers</strong>
+          <span>TPC operates zero user accounts, cloud databases, advertising SDKs, or developer analytics/crash-tracking SDKs.</span>
+        </div>
+        <div class="summary-tile navy">
+          <strong>Local-First Vault</strong>
+          <span>Your studies, Informed Consent scans, lab reports, medications, expenses, and checklists are saved locally on your device by default.</span>
+        </div>
+        <div class="summary-tile">
+          <strong>Encrypted Backups</strong>
+          <span>All newly exported full backups are encrypted client-side using AES-256-GCM before saving or optional cloud upload.</span>
+        </div>
+        <div class="summary-tile">
+          <strong>Explicit Online Actions Only</strong>
+          <span>Optional online tools (cloud backup, driving route lookup, translation model download, external spreadsheets) run only when you initiate them.</span>
+        </div>
+      </div>
+
+      <div class="callout amber">
+        <strong>Important Notice About Online Features &amp; Store Services</strong>
+        While TPC stores your personal study records locally on your device by default, the App is <strong>not completely offline-only</strong>.
+        Certain optional user-triggered features—and platform services provided by Google Play or Apple—connect over HTTPS as transparently disclosed in Sections 4, 5, and 7 below.
+      </div>
+    </section>
+
+    <section id="local-data" class="card">
+      <h2>2. Information You Enter &amp; Store Locally on Your Device <span class="badge badge-operational">Active in v1.2.40</span></h2>
       <p>
-        When you use The Participant Connection, any personal or study-related information you enter or capture is stored locally within the App's private Android application sandbox (<code>AsyncStorage</code> and <code>/data/user/0/com.theparticipantconnection.app/files/</code>) on your own device:
+        Everything you enter in TPC is stored locally inside your device&rsquo;s private application sandbox
+        (<code>AsyncStorage</code> and the app&rsquo;s sandboxed <code>documentDirectory</code>). TPC developers cannot view, access, or retrieve these records.
       </p>
       <ul>
-        <li><strong>Study Schedule &amp; Contact Records (<em>My Study Tracker</em>):</strong> Study or protocol titles, investigational product labels, clinic/site names, addresses, phone numbers, email contacts, screening dates, in-house stay dates, follow-up appointments, washout eligibility dates, registry call reminders, personal dosing logs, compensation/stipend notes, and personal visit notes you choose to enter.</li>
-        <li><strong>Informed Consent Form Scans &amp; Text (<em>ICF Scanner &amp; Wallet</em>):</strong> Photographs or imported images of Informed Consent Form (ICF) pages, locally generated page thumbnails, on-device Optical Character Recognition (OCR) text extracted from those images, on-device translated text, and personal annotations.</li>
-        <li><strong>Personal Health &amp; Vitals Logs (<em>Health Measurements &amp; BMI</em>):</strong> Self-entered blood pressure measurements (systolic, diastolic, pulse), weight, height, calculated Body Mass Index (BMI), measurement dates/notes, and unit preferences (Imperial or Metric).</li>
-        <li><strong>Packing Checklists &amp; Travel Preparation (<em>What to Bring</em>):</strong> Master Study Checklist selections, custom checklist items, personal packing lists, section visibility preferences, travel departure dates/modes/notes, and local departure-day reminder times.</li>
-        <li><strong>App Preferences &amp; Local Recovery Snapshot:</strong> Selected interface language (<code>English</code>, <code>Español</code>, <code>Deutsch</code>, <code>中文</code>, <code>日本語</code>, or <code>Français</code>), onboarding/disclaimer acknowledgments, active tab preferences, and an internal local recovery snapshot maintained strictly inside the App's private device directory to protect against accidental state loss during app updates.</li>
+        <li>
+          <strong>My Study Tracker:</strong> Clinical study titles, protocol labels, clinic names, clinic addresses, clinic phone numbers and email addresses,
+          screening dates, check-in/checkout dates, follow-up visit dates, personal reminders, notification timing preferences (including visit alarms and countdown reminders), and notes.
+        </li>
+        <li>
+          <strong>ICF Scanner &amp; Wallet:</strong> Photographed or scanned Informed Consent Form (ICF) page images, imported PDFs or photos,
+          locally extracted Optical Character Recognition (OCR) text, translated text, cropped or permanently pixel-redacted copies you save, and personal notes.
+        </li>
+        <li>
+          <strong>My Lab Reports, Medical History &amp; Study Medications:</strong> User-entered screening and study laboratory values, imported medical documents/PDFs/images,
+          diagnosis and surgical history notes, study medication names, dosages, logs, and drug half-life reference records.
+        </li>
+        <li>
+          <strong>Expense &amp; Mileage Tracker:</strong> Clinical study trips, separate personal trips, trip summaries, expense line items (lodging, flights, rental cars,
+          mileage, fuel/tolls/parking, rideshare/taxi, meals, and custom categories), camera-captured or imported receipt images/PDFs, tax-recordkeeping flags, and recoverable items in Recently Deleted.
+        </li>
+        <li>
+          <strong>Tools, Measurements &amp; Checklists:</strong> Blood pressure (including measurement arm preference), heart rate, temperature, weight, BMI calculations, blood glucose readings and unit preferences, What to Bring checklists, Personal Packing Lists, Restricted Items references, and Shopping Lists.
+        </li>
+        <li>
+          <strong>App Preferences &amp; Local Entitlement State:</strong> Selected interface language, User Agreement acceptance timestamp, optional App Lock setting, optional automatic cloud backup preferences, and store subscription entitlement cache (including a local Keystore/Keychain entitlement verification record on-device).
+        </li>
       </ul>
+
+      <div class="callout green">
+        <strong>OS Device Auto-Backup &amp; OTA Code Updates Disabled</strong>
+        On Android, automatic Android OS Auto Backup is explicitly disabled (<code>android:allowBackup="false"</code> along with <code>backup_rules.xml</code> and <code>data_extraction_rules.xml</code>) so plaintext clinical study records are not automatically uploaded into generic device backups. Remote over-the-air JavaScript code updates (Expo Updates) are also disabled (<code>enabled: false</code>).
+      </div>
+    </section>
+
+    <section id="encrypted-backups" class="card">
+      <h2>3. Encrypted Backups, Legacy Restores &amp; Unencrypted File Exports <span class="badge badge-operational">Active in v1.2.40</span></h2>
+
+      <h3>A. Full Participant Data Backups (Mandatory Client-Side AES-256-GCM Encryption)</h3>
       <p>
-        <strong>Automatic Cloud Backup Disabled:</strong> To prevent silent or unintended cloud uploads of sensitive consent documents or study notes, the Android application is configured with <code>android:allowBackup="false"</code> and strict Android data-extraction exclusion rules (<code>backup_rules.xml</code> and <code>data_extraction_rules.xml</code>), excluding your App records from automatic Android cloud backups and unauthenticated device-to-device transfers.
+        Whenever you create a full Data Backup in v1.2.40—whether saved manually to device storage, shared via the OS Share Sheet,
+        or uploaded via opt-in Cloud Backup—the archive is encrypted on your device <strong>before leaving staging</strong>:
+      </p>
+      <ul>
+        <li>
+          <strong>Cipher &amp; Key Derivation:</strong> AES-256-GCM (<code>TPC_ENC1</code> authenticated binary envelope) using a key derived from your required
+          password/passphrase (minimum 10 characters, or an optional 24-character password created with the built-in cryptographically secure random password generator)
+          with <strong>250,000 iterations of PBKDF2-HMAC-SHA256</strong>, a unique random 16-byte salt, a unique random 12-byte IV, and header authentication (GCM AAD), plus SHA-256 integrity checksums.
+        </li>
+        <li>
+          <strong>Zero Plaintext Export for Full Backups:</strong> Unencrypted full backup creation is disabled in v1.2.40, and temporary staging files are deleted immediately after encryption. (Manual local saves via Android Storage Access Framework or iOS Files may still carry a <code>.zip</code> filename for file-picker compatibility while containing the encrypted <code>TPC_ENC1</code> payload; cloud backups use <code>.tpcenc</code>.)
+        </li>
+        <li>
+          <strong>Passphrase Responsibility &amp; Hardware Key Caching:</strong> For manual encrypted backups, your password is never saved by TPC and cannot be recovered if lost. If—and only if—you choose to enable <strong>Automatic Cloud Backup</strong> on your device, your authorized backup passphrase is stored locally inside your device&rsquo;s hardware-backed <strong>Android Keystore</strong> or <strong>Apple iOS Keychain</strong> so scheduled backups can run silently on that device without sending your passphrase to TPC, Google, or Apple. To restore onto a replacement device, you must still enter your Backup Password yourself.
+        </li>
+      </ul>
+
+      <h3>B. Legacy Unencrypted Backup Import Compatibility</h3>
+      <p>
+        So longtime participants are never locked out of older archives, the Restore tool can still inspect and import previously created unencrypted legacy
+        <code>.zip</code> backup archives from earlier versions of the App when you explicitly select one (with SHA-256 integrity and path-traversal safety checks). All newly exported full backups in v1.2.40 are encrypted.
       </p>
 
-      <h2>4. Android Permissions &amp; How They Are Used</h2>
+      <h3>C. Non-Archive File Exports &amp; Shares (Reports, PDFs, Spreadsheets &amp; Redacted Copies)</h3>
       <p>
-        All runtime permissions are optional; if you decline a permission, unrelated features of the App continue to function normally.
+        When you explicitly choose to generate and save, print, email, or share individual summaries or documents outside Full Data Backup—such as:
       </p>
+      <ul>
+        <li><strong>Expense &amp; Mileage Reports</strong> exported as PDF (<code>.pdf</code>), Excel (<code>.xlsx</code>), or CSV (<code>.csv</code>);</li>
+        <li><strong>Health Measurements Exports</strong> generated offline as PDF (<code>.pdf</code>) or CSV (<code>.csv</code>);</li>
+        <li><strong>ICF PDFs, Cropped/Redacted Photos, or Extracted/Translated Text</strong> saved or shared via the system Share Sheet; or</li>
+        <li><strong>Study Tracker Visit Summaries</strong> shared by email or native share menu;</li>
+      </ul>
+      <p>
+        those individual files are exported as <strong>standard unencrypted files or text</strong> so you can view, print, submit, or share them with clinics, tax preparers, or family members. Once exported or shared outside the App, those files are governed by where you store them and whom you share them with.
+      </p>
+    </section>
+
+    <section id="cloud-backup" class="card">
+      <h2>4. Optional Opt-In Encrypted Cloud Backup <span class="badge badge-operational">Opt-In Only</span></h2>
+      <p>
+        Automatic Cloud Backup is <strong>off by default</strong>. If you explicitly turn it on inside <em>Data Backup &amp; Restore</em>, TPC uploads only your client-side
+        <strong>AES-256-GCM encrypted <code>.tpcenc</code> archives</strong> (plus small encrypted-archive metadata such as timestamp, SHA-256 hash, and record counts) directly from your device to your own personal cloud storage:
+      </p>
+      <ul>
+        <li>
+          <strong>Android — Google Drive Hidden App Data (<code>drive.appdata</code>):</strong>
+          Uses Google Identity Authorization requesting strictly the least-privilege scope
+          <code>https://www.googleapis.com/auth/drive.appdata</code>. TPC has <strong>zero visibility or access</strong> to any of your personal documents, photos, or folders in Google Drive—only its hidden app-private backup files (<code>tpc_cloud_backup_latest.tpcenc</code> and <code>tpc_cloud_backup_prev.tpcenc</code>). You can disconnect and revoke TPC&rsquo;s OAuth token anytime directly in the App or in your Google Account permissions.
+        </li>
+        <li>
+          <strong>iOS &amp; iPadOS — Private Apple iCloud Drive Container:</strong>
+          Uses Apple&rsquo;s private CloudDocuments ubiquity container (<code>iCloud.com.theparticipantconnection.app</code>, marked non-public), accessible only inside your signed-in Apple Account&rsquo;s iCloud Drive under iOS Settings.
+        </li>
+        <li>
+          <strong>Zero-Plaintext Upload Enforcement:</strong> Native guards verify the <code>TPC_ENC1</code> cryptographic header and local SHA-256 digest before any network transfer begins. Neither TPC, Google, nor Apple receives your unencrypted study records or your backup password inside cloud backup uploads.
+        </li>
+      </ul>
+    </section>
+
+    <section id="online-features" class="card">
+      <h2>5. Optional Online Features, Platform SDKs &amp; Third-Party Services</h2>
+      <p>
+        TPC contains <strong>no ads</strong>, <strong>no behavioral tracking</strong>, and <strong>no developer analytics</strong>. However, specific optional features and platform libraries connect externally as described below:
+      </p>
+
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Android Permission</th>
-              <th>Purpose in The Participant Connection</th>
+              <th>Feature / Component</th>
+              <th>When Network Is Used</th>
+              <th>What Information Is Involved</th>
+              <th>Third-Party Service &amp; Controls</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Camera</strong> (<code>android.permission.CAMERA</code>)</td>
-              <td>Requested only when you choose to photograph Informed Consent Form (ICF) pages directly into your local ICF Wallet.</td>
+              <td data-label="Feature / Component"><strong>Driving Route Mileage Lookup</strong><br /><em>(Expense &amp; Mileage Tracker)</em></td>
+              <td data-label="When Network Is Used">Only when you accept the route-lookup notice and tap <em>&ldquo;Compute Route Mileage.&rdquo;</em></td>
+              <td data-label="What Information Is Involved">User-entered starting and destination locations (accidental email/protocol/participant ID strings are stripped client-side before sending).</td>
+              <td data-label="Third-Party Service &amp; Controls">Sent over HTTPS to <strong>Esri ArcGIS World Geocoder</strong> (<code>geocode.arcgis.com</code>), <strong>OpenStreetMap Nominatim</strong> (<code>nominatim.openstreetmap.org</code>), and <strong>OSRM</strong> (<code>router.project-osrm.org</code> / <code>routing.openstreetmap.de</code>). Choose <em>&ldquo;Enter Mileage Manually&rdquo;</em> for 100% offline use.</td>
             </tr>
             <tr>
-              <td><strong>Photo Selection / Legacy Storage</strong> (<code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code> up to Android 12, API 32)</td>
-              <td>Allows importing existing document images or saving user-exported files on older Android versions. On Android 13+, image selection uses the Android system picker without broad media-library access.</td>
+              <td data-label="Feature / Component"><strong>ICF Scanning, OCR &amp; Translation</strong></td>
+              <td data-label="When Network Is Used">
+                <strong>Android:</strong> First-time download (~30 MB) when choosing a non-English ML Kit translation model; plus standard Google ML Kit / Play Services diagnostics.<br />
+                <strong>iOS/iPadOS:</strong> Offline.
+              </td>
+              <td data-label="What Information Is Involved">
+                Scanned pages and extracted text are processed <strong>on-device</strong> (Google ML Kit on Android; Apple VisionKit &amp; Vision on iOS). On Android, <code>com.google.mlkit</code> + <code>datatransport</code> may send limited library/model diagnostic metrics and device/app metadata to Google. On iOS v1.2.40, translation uses TPC&rsquo;s built-in offline clinical dictionary.
+              </td>
+              <td data-label="Third-Party Service &amp; Controls">Google ML Kit &amp; Google Play Services Privacy Terms apply to Android ML Kit model downloads and SDK diagnostics. Offline clinical dictionary fallback works with zero internet on both platforms.</td>
             </tr>
             <tr>
-              <td><strong>Notifications (<code>POST_NOTIFICATIONS</code>), Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code>), Boot Recovery (<code>RECEIVE_BOOT_COMPLETED</code>), &amp; Vibration (<code>VIBRATE</code>)</strong></td>
-              <td>Used solely to schedule, display, and restore <strong>local on-device reminders</strong> you set for study visits, washout completion dates, registry calls, and packing departure reminders. Reminders are generated locally on your phone, not sent from a remote push server.</td>
+              <td data-label="Feature / Component"><strong>Participant Resources &amp; Spreadsheets</strong></td>
+              <td data-label="When Network Is Used">Only when you tap a Google Doc/Sheet link or tap <em>Download Latest Excel / CSV</em>.</td>
+              <td data-label="What Information Is Involved">Standard HTTPS web/file download request to public read-only Google Docs/Sheets URLs (your IP address/request headers are visible to Google).</td>
+              <td data-label="Third-Party Service &amp; Controls">Opens in your browser/Sheets app or saves locally via <code>FileSystem.downloadAsync</code>. Governed by Google&rsquo;s Privacy Policy.</td>
             </tr>
             <tr>
-              <td><strong>Set Alarm</strong> (<code>com.android.alarm.permission.SET_ALARM</code>)</td>
-              <td>Used only when you tap to set an alarm in your phone's Clock app; opens your system Clock app pre-filled with the time and label so you can review and confirm saving the alarm yourself.</td>
+              <td data-label="Feature / Component"><strong>Subscriptions &amp; Payments</strong></td>
+              <td data-label="When Network Is Used">When viewing store prices, subscribing, or restoring purchases.</td>
+              <td data-label="What Information Is Involved">Subscription SKU status and platform purchase receipts/JWS transactions verified through the store. TPC never collects credit cards or banking details.</td>
+              <td data-label="Third-Party Service &amp; Controls">Handled exclusively by <strong>Google Play Billing</strong> (Android) or <strong>Apple StoreKit 2</strong> (iOS/iPadOS).</td>
             </tr>
             <tr>
-              <td><strong>Internet &amp; Network State</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</td>
-              <td>Used by Google ML Kit to download offline OCR and translation language models from Google servers when needed (see Section 5), and to verify connectivity before model downloads.</td>
+              <td data-label="Feature / Component"><strong>Local Visit &amp; Countdown Reminders</strong></td>
+              <td data-label="When Network Is Used">None required for notifications (scheduled locally on device).</td>
+              <td data-label="What Information Is Involved">Reminder titles and scheduled dates stay in local OS notification storage. TPC does <strong>not</strong> request remote push tokens or send push notifications from a server.</td>
+              <td data-label="Third-Party Service &amp; Controls">Note: Android builds transitively declare Google Play/Firebase messaging library metadata via Expo Notifications, though no remote push token registration or server messaging is used by TPC.</td>
+            </tr>
+            <tr>
+              <td data-label="Feature / Component"><strong>External App Handoffs</strong><br /><em>(AI, Calendar, Phone, Email, Maps, Share)</em></td>
+              <td data-label="When Network Is Used">Only when you tap <em>Ask ChatGPT</em>, <em>Add to Calendar</em>, a clinic phone/email link, Maps, or Share.</td>
+              <td data-label="What Information Is Involved">
+                <strong>Ask ChatGPT:</strong> Displays a mandatory privacy checkbox and optional auto-redaction of dates, phone numbers, emails, IDs, and signatures before copying/opening text.<br />
+                <strong>Calendar:</strong> Writes only the appointment/departure details you choose (TPC does not read or import existing calendar events).
+              </td>
+              <td data-label="Third-Party Service &amp; Controls">Handled by ChatGPT (<code>chatgpt.com</code> / ChatGPT app), Apple/Google Calendar, Phone, Mail, or Maps under their own privacy policies.</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </section>
 
-      <h2>5. On-Device OCR, Translation &amp; Third-Party SDK Disclosures (Google ML Kit)</h2>
+    <section id="permissions" class="card">
+      <h2>6. Device Permissions &amp; Biometric Privacy <span class="badge badge-operational">All Permissions Optional</span></h2>
       <p>
-        The App integrates <strong>Google ML Kit</strong> (<code>com.google.android.gms:play-services-mlkit-text-recognition</code> and <code>com.google.mlkit:translate</code>) to provide offline-capable Optical Character Recognition (OCR) and six-language translation inside the ICF Scanner &amp; Wallet:
+        Every device permission in TPC is optional and requested in context when you choose the related feature.
+        If you decline any permission, all unrelated features of TPC continue operating normally.
       </p>
       <ul>
-        <li><strong>Your Document Photos &amp; Text Stay On-Device:</strong> Image recognition and text translation execute locally on your Android device. <strong>Neither The Participant Connection nor Google ML Kit uploads your ICF photographs, extracted OCR text, or translated document text to external servers.</strong></li>
-        <li><strong>Language &amp; Vision Model Downloads:</strong> Google Play Services and Google ML Kit connect over encrypted HTTPS to Google servers to download or update on-device OCR recognition modules and neural translation language packs (for example, the first time you translate into Spanish, German, Chinese, Japanese, or French).</li>
-        <li><strong>Google ML Kit SDK Operational Diagnostics:</strong> As documented in Google's official <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">ML Kit Android Data Disclosure</a>, Google's bundled ML Kit / Google Play Services libraries (<code>com.google.android.datatransport</code>) automatically collect limited technical diagnostics and device metadata — such as device model, Android OS version, application package/version, SDK configuration, model download events, API performance/error metrics, and technical device/installation identifiers — encrypted in transit over HTTPS to Google for SDK reliability, security, and performance analytics. We do not receive or access this Google SDK telemetry and cannot link it to any individual user. Google's processing of SDK diagnostics is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+        <li>
+          <strong>Camera &amp; Photo Library / Document Files:</strong> Used strictly when you capture, import, crop, redact, or export Informed Consent pages, medical records, or expense receipts, or select a backup archive to restore. Microphone permission is explicitly disabled.
+        </li>
+        <li>
+          <strong>Notifications &amp; Exact Visit Alarms:</strong> Used strictly to fire local on-device reminders for study visits, check-in/checkout and follow-up countdowns, and packing lists (including restoring local alarms after device reboot on Android, and Time-Sensitive notifications on iOS when permitted). Overlay permissions (<code>SYSTEM_ALERT_WINDOW</code>) and launcher badge permissions are disabled.
+        </li>
+        <li>
+          <strong>Calendar Access (Add to Calendar):</strong> Used only when you tap <em>Add to Calendar</em> on a study visit or travel event. On iOS 17+, TPC uses write-only calendar event sheets (<code>NSCalendarsWriteOnlyAccessUsageDescription</code> / <code>EKEventEditViewController</code>); on Android and earlier iOS versions, TPC launches the native calendar event sheet without reading or harvesting your existing calendar events.
+        </li>
+        <li>
+          <strong>Biometric Authentication &amp; Screen Privacy Shield (Opt-In App Lock):</strong> When enabled, TPC uses your device operating system&rsquo;s native security framework (Android <code>BiometricPrompt</code> / <code>KeyguardManager</code>; iOS <code>LocalAuthentication</code> Face ID, Touch ID, or device passcode). <strong>TPC never accesses, reads, stores, or transmits biometric templates, fingerprints, facial scans, or device passcodes.</strong> When App Lock is active, TPC also turns on Android <code>FLAG_SECURE</code> (blocking screenshots and recents thumbnails) and an iOS multitasking privacy shield overlay.
+        </li>
       </ul>
-      <p>
-        <em>Technical Note on Notification Libraries:</em> The App uses the standard <code>expo-notifications</code> library strictly for local on-device notifications. Although the underlying library merges standard Firebase Cloud Messaging receiver declarations into the compiled Android manifest, the App connects to no Firebase project, bundles no <code>google-services.json</code> credentials, and never requests remote push notification tokens.
-      </p>
+    </section>
 
-      <h2>6. Participant-Initiated Data Backup &amp; Restore (<code>.zip</code> Archives)</h2>
+    <section id="subscriptions" class="card">
+      <h2>7. Subscriptions, Billing &amp; Post-Expiration Data Preservation <span class="badge badge-operational">Active in v1.2.40</span></h2>
+      <ul>
+        <li>
+          <strong>Free to Download &amp; Explore:</strong> You can download TPC and preview disclosures, features, and pricing before paying. An active paid subscription unlocks full operational use of the App&rsquo;s tools and records.
+        </li>
+        <li>
+          <strong>Approved Subscription Plans (Base USD Pricing):</strong>
+          <ul>
+            <li><strong>Monthly Plan:</strong> <strong>$6.00 USD / month</strong> (Product IDs: <code>tpc_sub_monthly_500</code> on Google Play; <code>com.theparticipantconnection.app.monthly</code> on Apple App Store).</li>
+            <li><strong>Annual Plan:</strong> <strong>$60.00 USD / year</strong> — 12 months for the price of 10 (2 months free vs. 12 monthly payments of $72.00; Product IDs: <code>tpc_sub_annual_5000</code> on Google Play; <code>com.theparticipantconnection.app.annual</code> on Apple App Store).</li>
+          </ul>
+          <em>Note:</em> Final displayed currency and applicable regional taxes are shown by Google Play or the Apple App Store prior to purchase confirmation. Subscriptions auto-renew unless canceled via your Google Play or Apple Account subscription settings.
+        </li>
+        <li>
+          <strong>No Lock-In Upon Expiration:</strong> If your subscription expires or is canceled, your existing local data is <strong>not deleted or held hostage</strong>—you retain read-only viewing access and full ability to export/back up your locally stored records.
+        </li>
+      </ul>
+    </section>
+
+    <section id="study-opps" class="card">
+      <h2>8. Planned Future Feature: TPC Study Opps 👀 &amp; Oppie <span class="badge badge-coming-soon">Coming Soon — Not Yet Active</span></h2>
       <p>
-        The App includes a <strong>Data Backup &amp; Restore</strong> tool allowing you to export all local App records and ICF Wallet images into a portable <code>.zip</code> archive (<code>TPC_Backup_YYYY-MM-DD_HHMM.zip</code>) or restore a previously exported archive:
+        We clearly distinguish between features currently operational in <strong>v1.2.40 (Build 133)</strong> and planned future offerings:
       </p>
       <ul>
-        <li><strong>Initiated Exclusively by You:</strong> Backup files are created, saved (via the Android system file picker), or shared (via the Android Share Sheet) only when you explicitly initiate an export or share action.</li>
-        <li><strong>Integrity Checksums vs. Encryption:</strong> Each backup archive includes SHA-256 cryptographic checksums (<code>manifest.json</code>) to detect file corruption before restoration. <strong>However, exported <code>.zip</code> archives are standard, unencrypted ZIP files</strong> so you can inspect or move them across devices without proprietary lock-in.</li>
-        <li><strong>Safeguarding Exported Files:</strong> Once you save or share a backup <code>.zip</code> file outside the App's private sandbox (such as to your <code>Downloads</code> folder, a computer, USB drive, email, or third-party cloud storage), anyone with access to that file or storage account could read its contents. Protecting exported backup archives is your responsibility and subject to the privacy practices of any storage or sharing service you choose.</li>
+        <li>
+          <strong>Current Build 133 Behavior (Informational Preview Only):</strong> The App displays an informational preview introducing <strong>Oppie</strong> and the upcoming
+          <strong>TPC Study Opps 👀</strong> service (in Onboarding Step 4 and at the bottom of the Home feature list). <strong>In v1.2.40, TPC Study Opps 👀 is not yet active:</strong>
+          there are zero live Telegram links, zero enrollment workflows, zero messaging connections, and zero Study Opps data collection inside the App.
+        </li>
+        <li>
+          <strong>Planned Functionality (Pending Development &amp; Testing):</strong> When launched in a future update, TPC Study Opps 👀 is planned as an exclusive benefit for eligible paid TPC app subscribers to access up to four specialized Telegram announcement channels (<em>General — Healthy Volunteers</em>, <em>Seniors — Ages 55+</em>, <em>Patient Studies</em>, and <em>Early Alerts</em>). Membership in any existing free TPC Telegram community does not grant access to Study Opps 👀, and no launch date is guaranteed. Before launch, this Privacy Policy will be updated if any eligibility verification or channel-linking mechanism involves new data flows, and any optional use of Telegram will remain governed by Telegram&rsquo;s own privacy policy.
+        </li>
+      </ul>
+    </section>
+
+    <section id="retention" class="card">
+      <h2>9. Data Retention, Deletion, Children&rsquo;s Privacy &amp; Your Rights</h2>
+
+      <h3>How Long Data Is Retained &amp; How to Delete Everything</h3>
+      <ul>
+        <li>
+          <strong>Local Device Data:</strong> Retained on your device solely under your control until you delete individual records in the App, clear App Storage in your device Settings, or uninstall TPC. <em>Because TPC keeps no copy of your study data on developer servers, uninstalling or clearing storage permanently erases your local records unless you first create and save an encrypted backup.</em>
+        </li>
+        <li>
+          <strong>Deleted Items Recovery Bin:</strong> In Expense Tracker, deleted items move to an on-device <em>Recently Deleted</em> bin until you permanently purge them or delete the app.
+        </li>
+        <li>
+          <strong>Cloud Backups:</strong> Encrypted <code>.tpcenc</code> backups in your Google Drive Hidden App Data or Apple iCloud Drive remain in your personal cloud account until you disconnect/remove them via your Google Account Connected Apps, Apple iCloud Storage Settings, or Backup &amp; Restore controls.
+        </li>
       </ul>
 
-      <h2>7. Optional User-Initiated External Apps, Links &amp; Handoffs</h2>
+      <h3>Health &amp; Regulatory Classification (Not a HIPAA Covered Entity)</h3>
       <p>
-        Certain optional convenience buttons allow you to open external applications or websites on your device. <strong>No information leaves the App unless you actively initiate one of these features:</strong>
+        TPC is an independent personal-organization and educational utility built for research participants directly. TPC is <strong>not</strong> a clinical research site, sponsor, Institutional Review Board (IRB), healthcare provider, or HIPAA-covered entity/business associate. You remain the sole custodian of the records you store on your device.
+      </p>
+
+      <h3>Children&rsquo;s Privacy</h3>
+      <p>
+        The Participant Connection is designed for adult clinical research participants (ages 18+) and is not directed to children under age 13 (or under age 16 where local law applies). We do not knowingly collect personal information from children.
+      </p>
+
+      <h3>Regional Privacy Rights (United States, EEA/UK GDPR, Brazil LGPD &amp; Others)</h3>
+      <p>
+        Because TPC does not maintain developer-hosted user accounts or central participant databases, you exercise direct access, portability, correction, and deletion rights directly inside the App (through record editing, encrypted backup/restore, PDF/CSV/Excel export, cloud disconnect, and app storage deletion). You may also contact us anytime regarding privacy questions or assistance exercising your rights.
+      </p>
+
+      <h3>Policy Updates</h3>
+      <p>
+        If we add new online capabilities, analytics, or live services such as TPC Study Opps 👀 in a future release, we will update this page with a new Effective &amp; Last Updated date and highlight material changes inside the App before they take effect.
+      </p>
+    </section>
+
+    <section id="terms" class="card terms-card">
+      <h2>10. Terms of Use &amp; Subscription Terms (<code>#terms</code>)</h2>
+      <p>
+        By downloading, accessing, or using <strong>The Participant Connection (TPC)</strong>, you agree to the following Terms of Use:
+      </p>
+      <ol>
+        <li>
+          <strong>Educational &amp; Informational Purpose Only — No Medical, Legal, or Tax Advice:</strong>
+          TPC is an independent participant-support, reference, and personal organization tool. It does <strong>not</strong> provide medical, diagnostic, clinical, legal, financial, or tax advice.
+          Nothing in TPC—including OCR text extraction, translations, lab code definitions, drug half-life information, Study Medications tracking, Expense/Tax Recordkeeping Summaries, or external spreadsheets—determines tax deductibility or substitutes for instructions from your Principal Investigator, study team, healthcare provider, IRB, attorney, or qualified tax advisor.
+        </li>
+        <li>
+          <strong>Does Not Replace Your Official Informed Consent Form (ICF):</strong>
+          Always read your official IRB-approved Informed Consent Form and follow all instructions, restrictions, visit schedules, and safety guidance from your research clinic. Automated OCR, translations, and countdown reminders are informational conveniences only and may contain inaccuracies or depend on your own entries and device alarm settings.
+        </li>
+        <li>
+          <strong>Independent Project Status:</strong>
+          TPC is an independent project and is not affiliated with, endorsed by, or sponsored by any pharmaceutical sponsor, clinical research clinic, Contract Research Organization (CRO), Institutional Review Board (IRB), OpenAI/ChatGPT, Google, or Apple. Clinic details, compensation estimates, and travel guides in linked external spreadsheets may change and must be verified directly with the clinic or vendor.
+        </li>
+        <li>
+          <strong>Subscriptions, Auto-Renewal &amp; Cancellations:</strong>
+          Downloading and browsing disclosures is free; full feature access requires an active paid subscription (<strong>$6.00/month</strong> or <strong>$60.00/year</strong> USD base tiers, plus applicable taxes and regional currency conversion displayed by your App Store or Google Play). Payment is charged to your Google Play or Apple ID account upon purchase confirmation and automatically renews for the selected billing period unless canceled in your Google Play or Apple Account settings (typically at least 24 hours before the end of the current period). Refunds and billing disputes are governed by Google Play or Apple App Store policies. If a subscription expires or is canceled, your locally stored records remain readable and exportable on your device.
+        </li>
+        <li>
+          <strong>Future Services Disclaimer (TPC Study Opps 👀):</strong>
+          Any preview of <em>TPC Study Opps 👀</em> or <em>Oppie</em> describes a planned future subscriber feature currently pending development and testing, with no guaranteed availability date, channel count, or study placement.
+        </li>
+        <li>
+          <strong>Permitted Use, Backups &amp; Limitation of Liability:</strong>
+          You are granted a personal, non-exclusive, non-transferable, revocable license to use TPC for personal clinical research participation management. You are solely responsible for maintaining encrypted backups of your data and safeguarding your Backup Password. To the maximum extent permitted by applicable law, TPC is provided on an &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; basis without warranties of any kind, and the developer shall not be liable for indirect, incidental, consequential, or lost-data damages arising from reliance on estimates, missed device alarms, forgotten encryption passwords, or third-party services.
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>11. Contact Information</h2>
+      <p>
+        If you have questions, feedback, privacy inquiries, or requests regarding this Privacy Policy or Terms of Use, please contact the developer directly:
       </p>
       <ul>
-        <li><strong>External AI Excerpt Review (<code>https://chatgpt.com/</code>):</strong> In the ICF Scanner &amp; Wallet, you may optionally redact common identifiers, copy selected text to your clipboard, and open ChatGPT in your browser or app. Before doing so, the App prompts you to review and remove personal identifiers (such as your full name, signature, date of birth, or participant ID). Any text you paste into an external AI service is governed by that provider's own privacy policy and terms.</li>
-        <li><strong>Educational Guides &amp; Community Spreadsheets (Google Docs / Google Sheets):</strong> Selecting external reference guides or clinic/travel spreadsheets in the <em>Resources</em> tab opens public Google Docs or Google Sheets links in your browser or Google app, subject to Google's Privacy Policy.</li>
-        <li><strong>Calendar, Maps, Clock, Phone &amp; Email Handoffs:</strong> Tapping "Add to Calendar" (device Calendar app or <code>calendar.google.com</code>), clinic map search (device Maps app or <code>google.com/maps</code>), "Set Alarm" (system Clock app), email sharing (<code>expo-mail-composer</code> / <code>mailto:</code>), or phone call buttons (<code>tel:</code>, including clinic numbers you save or the optional Verified Clinical Trials phone shortcut) hands off only the specific details required for that action directly to the app you choose.</li>
+        <li><strong>Application:</strong> The Participant Connection (TPC)</li>
+        <li><strong>Developer / Support Email:</strong> <a href="mailto:theparticipantconnection@gmail.com">theparticipantconnection@gmail.com</a></li>
+        <li><strong>Official Policy &amp; Terms URL:</strong> <a href="https://tpconn.github.io/">https://tpconn.github.io/</a></li>
       </ul>
-
-      <h2>8. Subscriptions &amp; Payment Information</h2>
-      <p>
-        The current release of The Participant Connection (<code>v1.2.21</code>) provides full access to features free of charge and displays only an informational preview regarding planned future membership options. If optional paid subscriptions are offered in future Google Play releases, all payment processing, free-trial eligibility, renewals, cancellations, and refunds will be processed exclusively by <strong>Google Play Billing</strong> under the <a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>. We never collect, receive, or store your credit card number, bank account details, or Google Play payment credentials.
-      </p>
-
-      <h2>9. Data Retention, Access &amp; Deletion Rights</h2>
-      <p>
-        Because all personal study data, health logs, checklists, and ICF images reside locally on your device, <strong>you have direct, immediate control over your data at all times</strong>:
-      </p>
-      <ul>
-        <li><strong>View, Edit &amp; Export:</strong> You may view, edit, or export your saved records inside the App at any time.</li>
-        <li><strong>Selective Deletion:</strong> You can delete individual study appointments, health measurements, packing lists, or scanned ICF documents directly within the App.</li>
-        <li><strong>Complete Local Erasure:</strong> You can permanently erase <strong>all</strong> local App data at any time via <strong>Android Settings &rarr; Apps &rarr; The Participant Connection &rarr; Storage &rarr; Clear data / Clear storage</strong>, or by <strong>uninstalling</strong> the App.</li>
-        <li><strong>Exported Backup Files:</strong> Clearing App storage or uninstalling the App does not automatically delete <code>TPC_Backup_*.zip</code> files that you previously saved to your device's <code>Downloads</code> folder or external storage; delete those <code>.zip</code> files manually using your file manager whenever desired.</li>
-      </ul>
-      <p>
-        Because we do not maintain user accounts or store your personal data on developer servers, we hold no server-side copy of your study records to access, modify, or delete on your behalf.
-      </p>
-
-      <h2>10. International Users (EEA, UK, Switzerland, Japan &amp; Global Privacy Rights)</h2>
-      <p>
-        The Participant Connection supports six interface languages (<code>English</code>, <code>Spanish</code>, <code>German</code>, <code>Chinese</code>, <code>Japanese</code>, and <code>French</code>) and may be used by adult clinical research participants internationally. Where the EU/UK General Data Protection Regulation (GDPR), Swiss FADP, Japan APPI, or comparable data-protection laws apply:
-      </p>
-      <ul>
-        <li><strong>Local Processing Under Your Control:</strong> Personal data you enter into the App stays locally on your device under your sole custody and is not transferred to us.</li>
-        <li><strong>Third-Party SDK Diagnostics:</strong> Limited technical telemetry processed by Google ML Kit (Section 5) is handled by Google LLC / Google Ireland Limited in accordance with Google's international data-transfer safeguards and privacy disclosures.</li>
-        <li><strong>Inquiries &amp; Rights Requests:</strong> If you contact us directly by email (for example, with a support or privacy question), we will use your email address and message solely to respond to your inquiry and will delete support correspondence upon request unless retention is required by law. Depending on your jurisdiction, you have the right to request access to or deletion of any email correspondence you have sent us, and the right to lodge a complaint with your local data-protection supervisory authority.</li>
-      </ul>
-
-      <h2>11. Children's Privacy</h2>
-      <p>
-        The Participant Connection is designed exclusively for <strong>adult clinical research participants (ages 18 and older)</strong> and is not directed to children under the age of 13 (or under the applicable age of digital consent in your jurisdiction, such as 16 in certain EEA member states). We do not knowingly collect personal information from children. If you believe a child has sent personal information to us via support email, please contact us at <a href="mailto:theparticipantconnection@gmail.com">theparticipantconnection@gmail.com</a> so we can promptly delete that communication.
-      </p>
-
-      <h2>12. Changes to This Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time to reflect App updates, Google Play policy requirements, or legal updates. When we make changes, we will revise the "Last Updated" date at the top of this page and publish the updated policy at the same permanent HTTPS URL. Material changes affecting how data is handled will also be communicated within the App update notes or disclosures.
-      </p>
-
-      <h2>13. Contact &amp; Data Controller Information</h2>
-      <p>
-        If you have questions, concerns, or requests regarding this Privacy Policy or The Participant Connection's privacy practices, please contact:
-      </p>
-      <address class="contact-box">
-        <strong>Developer:</strong> The Participant Connection<br />
-        <strong>Legal Account Owner / Data Controller:</strong> Mary Angela Gasper (operating as The Participant Connection)<br />
-        <strong>Privacy Contact Email:</strong> <a href="mailto:theparticipantconnection@gmail.com">theparticipantconnection@gmail.com</a>
-      </address>
-    </article>
+    </section>
   </main>
 
   <footer>
-    &copy; 2026 The Participant Connection &bull; Inform &bull; Support &bull; Empower
+    <p>&copy; 2026 The Participant Connection (TPC). All rights reserved. &bull; Version 1.2.40 (Build 133) &bull; Updated November 15, 2026.</p>
   </footer>
 </body>
 </html>
